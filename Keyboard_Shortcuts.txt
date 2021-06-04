@@ -1,0 +1,30 @@
+Pc software version 1.0.30
+
+Space: Run/Stop
+Enter: Auto set
+
+Q: The voltage division of Channel 1 decreases one level
+A: The voltage division of Channel 1 increases one level
+W: The voltage division of Channel 2 decreases one level
+S: The voltage division of Channel 2 increases one level
+←: Time base decreases one level
+→: Time base increases one level
+
+F1: Open help document
+
+-------------------------------------------
+
+Pc software version 1.0.33
+
+F5: Run/Stop
+Space: Single Trigger
+Ctrl + Enter: AutoSet
+
+Q: The voltage division of Channel 1 decreases one level
+A: The voltage division of Channel 1 increases one level
+W: The voltage division of Channel 2 decreases one level
+S: The voltage division of Channel 2 increases one level
+←: Time base decreases one level
+→: Time base increases one level
+
+F1: Open help document
