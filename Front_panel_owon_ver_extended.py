@@ -1,8 +1,8 @@
 import serial
 import win32com.client as comclt
 
-# Escuchamos en el puerto COM en el que esta el arduino a 9600 baudios.
-arduino = serial.Serial("COM5", 9600)
+arduino = serial.Serial("COM5", 9600) # Escuchamos en el puerto COM en el que esta el 
+#arduino a 9600 baudios.
 
 selector = 0
 
@@ -21,33 +21,28 @@ while (1):
 
 #----------------------------------------------------
 # Este bloque de codigo es el encargado de manejar la funcion del encoder en base al
-# valor enviado por el arduino (102, 103 o 104) 
+# valor enviado por el arduino (102 o 103) 
     if e == 102:
-        selector = 'horizontal'
-        print('horizontal')
-
-    elif e == 103:
         selector = 'ch1'
         print('Canal 1')
         
-    elif e == 104:
+    elif e == 103:
         selector = 'ch2'
         print('Canal 2')
-
+ 
 #----------------------------------------------------
 
-    if selector == 'horizontal':
-        if e == 49:
-            wsh= comclt.Dispatch("WScript.Shell")
-            wsh.AppActivate("launcher.exe")
-            wsh.SendKeys("{RIGHT}")
 
-        if e == 51:
-            wsh= comclt.Dispatch("WScript.Shell")
-            wsh.AppActivate("launcher.exe")
-            wsh.SendKeys("{LEFT}")
-    else:
-        pass
+    if e == 59:
+        wsh= comclt.Dispatch("WScript.Shell")
+        wsh.AppActivate("launcher.exe")
+        wsh.SendKeys("{RIGHT}")
+
+    if e == 61:
+        wsh= comclt.Dispatch("WScript.Shell")
+        wsh.AppActivate("launcher.exe")
+        wsh.SendKeys("{LEFT}")
+
 
 #----------------------------------------------------
     
@@ -81,17 +76,43 @@ while (1):
 
 #----------------------------------------------------
 
-    if e == 1:  #>>single trigger<<
-        wsh= comclt.Dispatch("WScript.Shell")
-        wsh.AppActivate("launcher.exe")
-        wsh.SendKeys(" ") #Espacio
-
-    if e == 2:  #>>Run/Stop<<
+    if e == 1:  #SW2   >>Run/Stop<<
         wsh= comclt.Dispatch("WScript.Shell")
         wsh.AppActivate("launcher.exe")
         wsh.SendKeys("{F5}") #F5
 
-    if e == 3:  #>>AutoSet<<
+    if e == 2:  #SW6   >>single trigger<<
+        wsh= comclt.Dispatch("WScript.Shell")
+        wsh.AppActivate("launcher.exe")
+        wsh.SendKeys(" ") #Espacio
+        
+
+    if e == 3:  #SW8   >>AutoSet<<
         wsh= comclt.Dispatch("WScript.Shell")
         wsh.AppActivate("launcher.exe")
         wsh.SendKeys("^~") #CTRL + ENTER
+
+#----------------------------------------------------
+# Estos botones se dejan sin ninguna funcion para una posible actualizacion
+# del software con mas shortcuts o tambien para agregar cualquier otro comando
+# que use necesite.
+
+    if e == 4:  #SW1
+        wsh= comclt.Dispatch("WScript.Shell")
+        wsh.AppActivate("launcher.exe")
+        wsh.SendKeys("")
+
+    if e == 5:  #SW5
+        wsh= comclt.Dispatch("WScript.Shell")
+        wsh.AppActivate("launcher.exe")
+        wsh.SendKeys("")
+
+    if e == 6:  #SW7
+        wsh= comclt.Dispatch("WScript.Shell")
+        wsh.AppActivate("launcher.exe")
+        wsh.SendKeys("")
+        
+    if e == 7:  #SW4 (Pulsador encoder horizontal)
+        wsh= comclt.Dispatch("WScript.Shell")
+        wsh.AppActivate("launcher.exe")
+        wsh.SendKeys("")

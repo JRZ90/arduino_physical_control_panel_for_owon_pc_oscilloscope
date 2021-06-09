@@ -13,7 +13,7 @@ int estadoAnteriorPulsadorEnc = 0;      //Variable que almacena el estado anteri
 
 const int PulsadorUno = 7;
 const int PulsadorDos = 6;
-const int PulsadorTres = 5;
+const int PulsadorTres = 8;
 
 int estadoPulsadorUno = 0;
 int estadoAnteriorPulsadorUno = 0;
@@ -47,7 +47,7 @@ void setup() {
   digitalWrite(14, LOW);
   digitalWrite(15, LOW);
 
-  Serial.println("5555");  //Imprime en monitor serial 5555 indicando a python que esta listo
+  Serial.println("102");  //Imprime en monitor serial 102 indicando a python que esta listo
 
   attachInterrupt(digitalPinToInterrupt(A), encoder, LOW);  //Interrupcion sobre pin A con
   //                                                       //Funcion ISR encoder y modo LOW
