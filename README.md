@@ -1,4 +1,4 @@
-This is a physical control panel for owon pc oscilloscopes, but can be used with any other brand and codel. The working principle is very simple, the software has some keyboard sortcuts for control some actions such the amplitude and time scale. When you press a button or turn the knob the arduino send a signal to python and this is who send a keystroke to the oscilloscope software emulating the keyboard.
+This is a physical control panel for owon pc oscilloscopes, but can be used with any other brand and codel. The working principle is very simple, the software has some keyboard shortcuts for control some actions such the amplitude and time scale. When you press a button or turn the knob the arduino send a signal to python and this is who send a keystroke to the oscilloscope software emulating the keyboard.
 
 ## Requirements
 ### Hardware
